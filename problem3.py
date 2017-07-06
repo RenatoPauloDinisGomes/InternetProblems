@@ -1,5 +1,6 @@
 holder = [-1 for i in range(100)]
 
+
 def main():
     problem = "Write a function that computes the list of the first 100 Fibonacci numbers. \nBy definition, the first two numbers in the Fibonacci sequence are 0 and 1, and each subsequent number is the sum of the previous two."
     holder[0] = 0

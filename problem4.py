@@ -14,15 +14,15 @@ def main():
     problem = "Write a function that given a list of non negative integers," \
               "arranges them such that they form the largest possible number."
     print(problem)
-    list = [random.randint(0, 100) for _ in range(5)]
+    lista = [random.randint(0, 100) for _ in range(5)]
 
-    print(list)
-    for i in range(len(list)):
-        for j in range(len(list)):
-            if comparator(list[i], list[j]) > 0:
-                list[i], list[j] = list[j], list[i]
+    print(lista)
+    for i, valuei in enumerate(lista):
+        for j, valuej in enumerate(lista):
+            if comparator(valuei, valuej) > 0:
+                lista[i], lista[j] = valuej, valuei
     print("Largest possible number: ", end="")
-    for elm in list:
+    for elm in lista:
         print(elm, end="")
 
 

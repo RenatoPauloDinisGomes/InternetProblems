@@ -1,7 +1,7 @@
 
 import random
 size = 10
-list = [random.randint(0,50) for i in range(10)]
+lista = [random.randint(0, 50) for i in range(10)]
 total = 0
 
 prompt = "Three functions that compute the sum of the numbers in a given list using a " \
@@ -9,24 +9,24 @@ prompt = "Three functions that compute the sum of the numbers in a given list us
 
 
 def recursive(i):
-    if i == len(list):
+    if i == len(lista):
         return 0
     else:
-        return recursive(i + 1) + list[i]
+        return recursive(i + 1) + lista[i]
 
 def main():
     global total
-    global list
-    print(list)
+    global lista
+    print(lista)
     index = 0
     opt = input(prompt)
     if opt == "1":
-        for i in range(len(list)):
-            total += list[i]
+        for elm in lista:
+            total += elm
         print(total)
     elif opt == "2":
-        while (len(list) != index):
-            total += list[index]
+        while (len(lista) != index):
+            total += lista[index]
             index += 1
         print(total)
     elif opt == "3":
